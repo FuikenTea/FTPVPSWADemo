@@ -78,7 +78,7 @@ function getDbData() {
     {
       id: 10,
       name: 'Bark Town Boomers',
-      description: '16oz package of fresh organic strawberries',
+      description: 'Aussie, Old or Cracked?',
       quantity: '1',
     },
     {
