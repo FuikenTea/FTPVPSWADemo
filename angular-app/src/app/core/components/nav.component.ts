@@ -12,8 +12,8 @@ import { Component } from '@angular/core';
         <a routerLink="/about" routerLinkActive="router-link-active">
           <span>About</span>
         </a>
-        <a href="/.auth/login/google">Login</a>
-          
+        <a href="/.auth/login/google">
+          <span>Login</span>
         </a>
       </ul>
     </nav>
