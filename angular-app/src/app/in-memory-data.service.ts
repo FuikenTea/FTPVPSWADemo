@@ -90,7 +90,7 @@ function getDbData() {
     {
       id: 30,
       name: 'Enter the 151 Chambers',
-      description: 'Bag of 17 fresh McIntosh apples',
+      description: 'Bag of 17 fresh McIntosh apples!',
       quantity: 1,
     },
   ];
