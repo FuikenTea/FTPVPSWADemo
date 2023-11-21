@@ -13,7 +13,13 @@ import { Component } from '@angular/core';
           <span>About</span>
         </a>
         <a href="/.auth/login/google">
-          <span>Login</span>
+          <span>Login Google</span>
+        </a>
+        <a href="/.auth/login/github?post_login_redirect_uri=/products">
+          <span>Login GitHUb</span>
+        </a>
+        <a href="/.auth/logout?post_logout_redirect_uri=/home">
+          <span>Log out</span>
         </a>
       </ul>
     </nav>
