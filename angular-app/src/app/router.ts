@@ -10,6 +10,5 @@ export const routes: Routes = [
       import('./products/products.module').then((m) => m.ProductsModule),
   },
   { path: 'about', component: AboutComponent },
-  { path: '**', component: NotFoundComponent },
-  { path: 'login', redirectTo: '/.auth/login/google' }
+  
 ];
