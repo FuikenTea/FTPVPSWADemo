@@ -2,16 +2,7 @@
   "navigationFallback": {
     "rewrite": "/index.html",
     "exclude": [ "*.{css,scss,js,png,gif,ico,jpg,svg}" ]
-  },
-
-  "auth": {
-    "identityProviders": {
-      "google": {
-        "registration": {
-          "clientIdSettingName": "51048769571-jspb6u7cbtrgp526e7bpeh2du0tk2cj7.apps.googleusercontent.com",
-          "clientSecretSettingName": "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"
-        }
-      }
-    }
   }
+
+
 }
