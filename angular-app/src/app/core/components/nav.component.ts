@@ -5,7 +5,7 @@ import { UserInfo } from '../model/user-info';
   selector: 'app-nav',
   template: `
     <nav class="menu">
-      <p class="menu-label">Menu</p>
+      <p class="menu-label">Navigation</p>
       <ul class="menu-list">
         <a routerLink="/products" routerLinkActive="router-link-active">
           <span>Products</span>
