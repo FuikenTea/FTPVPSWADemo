@@ -10,12 +10,12 @@
   "runtime": {
     "rest": {
       "enabled": true,
-      "path": "/data-api/rest"
+      "path": "/rest"
     },
     "graphql": {
       "allow-introspection": true,
       "enabled": true,
-      "path": "/data-api/graphql"
+      "path": "/graphql"
     },
     "host": {
       "mode": "development",
