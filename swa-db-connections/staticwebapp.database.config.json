@@ -30,7 +30,7 @@
   },
   "entities": {
     "Communities": {
-      "source": "communities",
+      "source": "MyTestPersonTable",
       "permissions": [
         {
           "actions": ["*"],
