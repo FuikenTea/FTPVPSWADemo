@@ -18,9 +18,9 @@
       "path": "/graphql"
     },
     "host": {
-      "mode": "production",
+      "mode": "development",
       "cors": {
-        "origins": ["http://localhost:4280"],
+        "origins": ["http://localhost:4200"],
         "allow-credentials": false
       },
       "authentication": {

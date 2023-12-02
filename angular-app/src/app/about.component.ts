@@ -37,7 +37,7 @@ export class AboutComponent {
 
 
   async list(): Promise<void>  {
-    const endpoint: string = '/data-api/rest/Communities';
+    const endpoint: string = '/rest/Communities';
     const response: Response = await fetch(endpoint);
     const data: any = await response.json();
     console.table(data.value);
