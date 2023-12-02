@@ -16,7 +16,7 @@ import { UserInfo } from '../model/user-info';
       </ul>
     </nav>
     <nav class="menu auth">
-      <p class="menu-label">Auth</p>
+      <p class="menu-label">Login</p>
         <div class="menu-list auth">
          <ng-container *ngIf="!userInfo; else logout">
            <ng-container *ngFor="let provider of providers">

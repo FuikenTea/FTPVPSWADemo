@@ -1,4 +1,11 @@
-import { Component } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  Output,
+  ChangeDetectionStrategy,
+} from '@angular/core';
+
 
 @Component({
   selector: 'app-about',
@@ -20,24 +27,19 @@ import { Component } from '@angular/core';
           </li>
         </ul>
         <h2 class="title">Database Info</h2>
-        <div>
-          <button id="list" onclick="list()">List</button>
-          <button id="get" onclick="get()">Get</button>
-          <button id="update" onclick="update()">Update</button>
-          <button id="create" onclick="create()">Create</button>
-          <button id="delete" onclick="del()">Delete</button>
-        </div>
-        <script>
-          async function list() {
-            const endpoint = '/data-api/rest/Person';
-            const response = await fetch(endpoint);
-            const data = await response.json();
-            console.table(data.value);
-        }
-
-        </script>
+        <button (click)="list()">Click Me</button>
       </div>
     </div>
+   
   `,
 })
-export class AboutComponent {}
+export class AboutComponent {
+
+
+  async list(): Promise<void>  {
+    const endpoint: string = '/data-api/rest/Person';
+    const response: Response = await fetch(endpoint);
+    const data: any = await response.json();
+    console.table(data.value);
+  }
+}
