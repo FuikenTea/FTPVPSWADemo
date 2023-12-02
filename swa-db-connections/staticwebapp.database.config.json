@@ -30,13 +30,49 @@
   },
   "entities": {
     "Communities": {
-      "source": "MyTestPersonTable",
+      "source": "communities",
       "permissions": [
         {
           "actions": ["*"],
           "role": "anonymous"
         }
       ]
-    }
+    },
+    "Tournaments": {
+      "source": "tournaments",
+       "permissions": [
+            {
+              "actions": ["*"],
+              "role": "anonymous"
+            }
+          ]
+        },
+      "Leagues": {
+          "source": "leagues",
+          "permissions": [
+            {
+              "actions": ["*"],
+              "role": "anonymous"
+            }
+          ]
+        },
+        "Teams": {
+          "source": "teams",
+          "permissions": [
+            {
+              "actions": ["*"],
+              "role": "anonymous"
+            }
+          ]
+        },
+        "Metas": {
+          "source": "metas",
+          "permissions": [
+            {
+              "actions": ["*"],
+              "role": "anonymous"
+            }
+          ]
+        }
   }
 }

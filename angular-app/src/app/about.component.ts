@@ -26,9 +26,23 @@ import {
             </a>
           </li>
         </ul>
-        <h2 class="title">Database Communities</h2>
-        <button (click)="list()">Click Me</button>
-      </div>
+        <h2 class="title">Database</h2>
+          <div>
+            <button (click)="listCommunities()">Get Communities</button>
+          </div>
+          <div>
+            <button (click)="listLeagues()">Get Leagues</button>
+          </div>
+          <div>
+            <button (click)="listTournaments()">Get Tournaments</button>
+          </div>
+          <div>
+            <button (click)="listMetas()">Get Metas</button>
+          </div>
+          <div>
+            <button (click)="listTeams()">Get Teams</button>
+          </div>
+      
     </div>
    
   `,
@@ -36,8 +50,37 @@ import {
 export class AboutComponent {
 
 
-  async list(): Promise<void>  {
+  async listCommunities(): Promise<void>  {
     const endpoint: string = '/data-api/rest/Communities';
+    const response: Response = await fetch(endpoint);
+    const data: any = await response.json();
+    console.table(data.value);
+  }
+
+  async listLeagues(): Promise<void>  {
+    const endpoint: string = '/data-api/rest/Leagues';
+    const response: Response = await fetch(endpoint);
+    const data: any = await response.json();
+    console.table(data.value);
+  }
+  
+  async listTournaments(): Promise<void>  {
+    const endpoint: string = '/data-api/rest/Tournaments';
+    const response: Response = await fetch(endpoint);
+    const data: any = await response.json();
+    console.table(data.value);
+  }
+
+
+  async listTeams(): Promise<void>  {
+    const endpoint: string = '/data-api/rest/Teams';
+    const response: Response = await fetch(endpoint);
+    const data: any = await response.json();
+    console.table(data.value);
+  }
+
+  async listMetas(): Promise<void>  {
+    const endpoint: string = '/data-api/rest/Metas';
     const response: Response = await fetch(endpoint);
     const data: any = await response.json();
     console.table(data.value);
