@@ -26,7 +26,7 @@ import {
             </a>
           </li>
         </ul>
-        <h2 class="title">Database Info</h2>
+        <h2 class="title">Database Communities</h2>
         <button (click)="list()">Click Me</button>
       </div>
     </div>
