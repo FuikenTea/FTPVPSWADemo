@@ -30,7 +30,7 @@
   },
   "entities": {
     "Communities": {
-      "source": "user",
+      "source": "communities",
       "permissions": [
         {
           "actions": ["*"],
