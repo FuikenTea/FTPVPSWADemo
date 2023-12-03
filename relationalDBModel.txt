@@ -1,0 +1,136 @@
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io/docs
+
+Table communities {
+  id integer
+  name varchar
+  about varchar
+  logo varchar
+  link varchar
+}
+
+table format { 
+  id integer
+  name varchar
+  logo bitmap
+  teamSize int 
+  rosterSize int
+  communityId int
+}
+
+table metas { 
+  id integer
+  name varchar
+  about varchar
+  logo varchar
+  cpLimit int
+  teamSize int
+  inclusions1 varchar
+  inclusions2 varchar
+  inclusions3 varchar 
+  inclusions4 varchar
+  inclusions5 varchar
+  inclusions6 varchar
+  inclusions7 varchar
+  inclusions8 varchar
+}
+
+table bouts {
+  id integer
+  team1Id int
+  team2id int
+  tournamentId int
+  playerToSlotMapTeam1 varchar
+  playerToSlotMapTeam2 varchar
+  playerToBattlePartyMapTeam1 varchar
+  playerToBattlePartyMapTeam2 varchar
+}
+
+table battleParty{
+  id int
+  boutId int
+  playerId int
+  pokemon1 varchar
+  p1Shadow  binary
+  p1fm varchar
+  p1cm1 varchar
+  p1cm2 varchar
+  p1cp int
+  p1hp int
+  pokemon2 varchar
+  p2Shadow  binary
+  p2fm varchar
+  p2cm1 varchar
+  p2cm2 varchar
+  pokemon3 varchar
+  p3Shadow  binary
+  p3fm varchar
+  p3cm1 varchar
+  p3cm2 varchar
+  pokemon4 varchar
+  p4Shadow  binary
+  p4fm varchar
+  p4cm1 varchar
+  p4cm2 varchar
+  pokemon5 varchar
+  p5Shadow  binary
+  p5fm varchar
+  p5cm1 varchar
+  p5cm2 varchar
+  pokemon6 varchar
+  p6Shadow  binary
+  p6fm varchar
+  p6cm1 varchar
+  p6cm2 varchar
+  
+}
+
+
+Table teams {
+  team_id integer
+  teamName varchar
+  ActiveTournaments int
+
+}
+
+Table users {
+  id integer [primary key]
+  username varchar
+  role varchar
+  team varchar
+  created_at timestamp
+}
+
+Table tournaments {
+  id integer [primary key]
+  format_id int
+  slotToMetaMap varchar  
+}
+
+Ref: "users"."team" <> "teams"."team_id"
+
+Ref: "format"."id" < "tournaments"."format_id"
+
+Ref: "teams"."ActiveTournaments" <> "tournaments"."id"
+
+Ref: "communities"."id" < "format"."communityId"
+
+Ref: "tournaments"."slotToMetaMap" < "metas"."id"
+
+Ref: "teams"."team_id" < "bouts"."team1Id"
+
+Ref: "teams"."team_id" < "bouts"."team2id"
+
+Ref: "tournaments"."id" < "bouts"."tournamentId"
+
+Ref: "users"."id" < "bouts"."playerToSlotMapTeam1"
+
+Ref: "users"."id" < "bouts"."playerToSlotMapTeam2"
+
+Ref: "users"."id" < "bouts"."playerToBattlePartyMapTeam1"
+
+Ref: "users"."id" < "bouts"."playerToBattlePartyMapTeam2"
+
+Ref: "battleParty"."id" < "bouts"."playerToBattlePartyMapTeam1"
+
+Ref: "battleParty"."id" < "bouts"."playerToBattlePartyMapTeam2"

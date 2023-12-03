@@ -1,0 +1,8 @@
+swa start -a .\angular-app\  --data-api-location swa-db-connections -w .\angular-app\ -r "npm start" 
+
+-a, --app-location <path>: the folder containing the source code of the front-end application (default: ".")
+--data-api-location - folder containng the data api 
+-w swaconfigfile location
+--run custom shell commands to run
+
+swa start -a .\angular-app\  --data-api-location swa-db-connections -w .\angular-app\ -r "npm start" 
