@@ -14,8 +14,8 @@ import { Component } from '@angular/core';
       </a>
       <a class="navbar-item nav-home" router-link="/">
         <span class="brand-first">Welcome to </span>
-        <span class="brand-second">BATTLE </span>
-        <span class="brand-third">FRONTIER</span>
+        <span class="brand-second">Project </span>
+        <span class="brand-third">Zygarde</span>
       </a>
     </div>
   `,

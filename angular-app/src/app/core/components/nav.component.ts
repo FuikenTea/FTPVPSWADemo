@@ -5,7 +5,7 @@ import { UserInfo } from '../model/user-info';
   selector: 'app-nav',
   template: `
     <nav class="menu">
-      <p class="menu-label">Menu</p>
+      <p class="menu-label">Navigation</p>
       <ul class="menu-list">
         <a routerLink="/products" routerLinkActive="router-link-active">
           <span>Products</span>
@@ -16,7 +16,7 @@ import { UserInfo } from '../model/user-info';
       </ul>
     </nav>
     <nav class="menu auth">
-      <p class="menu-label">Auth</p>
+      <p class="menu-label">Login</p>
         <div class="menu-list auth">
          <ng-container *ngIf="!userInfo; else logout">
            <ng-container *ngFor="let provider of providers">
@@ -38,7 +38,7 @@ import { UserInfo } from '../model/user-info';
 export class NavComponent implements OnInit {
 
   userInfo: UserInfo;
-  providers = [ 'github', 'google', 'aad'];
+  providers = [ 'github', 'aad'];
   redirect = window.location.pathname;
 
   async ngOnInit() {
