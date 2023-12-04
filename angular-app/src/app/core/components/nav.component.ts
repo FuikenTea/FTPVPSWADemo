@@ -38,7 +38,7 @@ import { UserInfo } from '../model/user-info';
 export class NavComponent implements OnInit {
 
   userInfo: UserInfo;
-  providers = [ 'aad', 'github'];
+  providers = [ 'google'];
   redirect = window.location.pathname;
 
   async ngOnInit() {
