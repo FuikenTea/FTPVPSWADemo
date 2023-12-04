@@ -4,7 +4,16 @@
         "route": "/*"
     }
   ],
-
+  "auth": {
+      "identityProviders": {
+        "google": {
+          "registration": {
+            "clientIdSettingName": "GOOGLE_CLIENT_ID",
+            "clientSecretSettingName": "GOOGLE_CLIENT_SECRET"
+          }
+        }
+      }
+    },
   "navigationFallback": {
     "rewrite": "/index.html",
     "exclude": [ "*.{css,scss,js,png,gif,ico,jpg,svg,hrf}" ]
