@@ -1,11 +1,8 @@
 {
   "routes": [
     {
-      "route": "/.auth/*",
-      "allowedRoles": [
-        "anonymous",
-        "authenticated"
-      ]
+      "route": "/.auth/login/google",
+      "statusCode": 200
     }
   ],
   "auth": {
