@@ -1,10 +1,5 @@
 {
-  "routes": [
-    {
-      "route": "/.auth/*",
-      "statusCode": 200
-    }
-  ],
+  
   "auth": {
       "identityProviders": {
         "google": {
