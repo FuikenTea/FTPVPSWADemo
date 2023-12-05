@@ -20,11 +20,11 @@ import { UserInfo } from '../model/user-info';
         <div class="menu-list auth">
          <ng-container *ngIf="!userInfo; else logout">
            <ng-container *ngFor="let provider of providers">
-             <a href="/.auth/login/{{provider}}?post_login_redirect_uri={{redirect}}">{{provider}}</a>
+             <a href="/.auth/login/{{provider}}">{{provider}}</a>
            </ng-container>
          </ng-container>
          <ng-template #logout>
-           <a href="/.auth/logout?post_logout_redirect_uri={{redirect}}">Logout</a>
+           <a href="/.auth/logout">Logout</a>
          </ng-template>
          </div>
 </nav>
@@ -38,7 +38,7 @@ import { UserInfo } from '../model/user-info';
 export class NavComponent implements OnInit {
 
   userInfo: UserInfo;
-  providers = [ 'github', 'aad'];
+  providers = [ 'google'];
   redirect = window.location.pathname;
 
   async ngOnInit() {
